@@ -62,3 +62,24 @@
   ```python
   arr = [64, 34, 25, 12, 22, 11, 90]
   bubble_sort(arr)  # Salida: [11, 12, 22, 25, 34, 64, 90]
+
+### 4. Árbol (Tree Sort)
+- **Descripción**:  
+  Ordena elementos construyendo un árbol binario de búsqueda y luego recorriéndolo en orden (inorden).
+
+- **Cómo funciona**:  
+  1. Construye un árbol binario de búsqueda con los elementos de la lista.  
+  2. Realiza un recorrido inorden (izquierda-raíz-derecha) del árbol.  
+  3. Los elementos se recogen en orden durante el recorrido.  
+
+- **Complejidad**:  
+  - ⏳ **Peor caso**: O(n²) (árbol degenerado, como una lista enlazada).  
+  - ✅ **Mejor caso**: O(n log n) (árbol balanceado).  
+  - 💾 **Espacio**: O(n) (necesita almacenar la estructura del árbol).  
+
+- **Estable**: ✔️ (mantiene el orden relativo de elementos iguales).  
+
+- **Ejemplo**:  
+  ```python
+  arr = [7, 6, 8, 5, 3]
+  tree_sort(arr)  # Salida: [3, 5, 6, 7, 8]
