@@ -41,3 +41,24 @@
   ```python
   arr = [64, 25, 12, 22, 11]
   selection_sort(arr)  # Salida: [11, 12, 22, 25, 64]
+
+### 3. Intercambio (Bubble Sort)
+- **Descripción**:  
+  Ordena comparando e intercambiando pares de elementos adyacentes hasta que la lista esté ordenada.
+
+- **Cómo funciona**:  
+  1. Recorre la lista comparando elementos adyacentes.  
+  2. Si están en el orden incorrecto, los intercambia.  
+  3. Repite el proceso hasta que no se necesiten más intercambios.  
+
+- **Complejidad**:  
+  - ⏳ **Peor caso**: O(n²) (lista en orden inverso).  
+  - ✅ **Mejor caso**: O(n) (lista ya ordenada).  
+  - 💾 **Espacio**: O(1) (ordenamiento in-place).  
+
+- **Estable**: ✔️ (no cambia el orden relativo de elementos iguales).  
+
+- **Ejemplo**:  
+  ```python
+  arr = [64, 34, 25, 12, 22, 11, 90]
+  bubble_sort(arr)  # Salida: [11, 12, 22, 25, 34, 64, 90]
