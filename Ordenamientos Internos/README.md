@@ -83,3 +83,24 @@
   ```python
   arr = [7, 6, 8, 5, 3]
   tree_sort(arr)  # Salida: [3, 5, 6, 7, 8]
+
+### 5. QuickSort
+- **Descripción**:  
+  Algoritmo de divide y vencerás que selecciona un "pivote" y particiona el array alrededor de este.
+
+- **Cómo funciona**:  
+  1. **Selección de pivote**: Escoge un elemento como pivote (aquí usamos el último elemento).  
+  2. **Partición**: Reordena el array colocando menores que el pivote a su izquierda y mayores a su derecha.  
+  3. **Recursión**: Aplica el mismo proceso a los subarrays izquierdo y derecho del pivote.  
+
+- **Complejidad**:  
+  - ⏳ **Peor caso**: O(n²) (cuando el pivote es el menor/mayor elemento).  
+  - ✅ **Mejor caso**: O(n log n) (particiones balanceadas).  
+  - 💾 **Espacio**: O(log n) (por la pila de llamadas recursivas).  
+
+- **Estable**: ❌ (no mantiene el orden relativo de elementos iguales).  
+
+- **Ejemplo**:  
+  ```python
+  arr = [10, 7, 8, 9, 1, 5]
+  quick_sort(arr)  # Salida: [1, 5, 7, 8, 9, 10]
