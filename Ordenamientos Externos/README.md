@@ -16,4 +16,23 @@
 
 - **Ejemplo de uso**:  
   ```python
-  straight_merge_sort("unsorted.txt", "sorted.txt", chunk_size=3)
+  straight_merge_sort("input_file", "output_file", "chunk_size")
+
+### 2. Natural Merging 
+
+- **Descripción**:  
+Algoritmo de ordenamiento externo que aprovecha las secuencias ya ordenadas naturales en los datos.  
+
+- **Cómo funciona**:  
+    1. **Detección de runs naturales**: Identifica secuencias ascendentes ya existentes  
+    2. **Mezcla iterativa**: Combina pares de runs hasta tener un solo archivo ordenado  
+
+- **Complejidad**:  
+⏳ **Tiempo**: O(n log n) (peor caso) | O(n) (si hay pre-ordenamiento)  
+💾 **Espacio**: O(n) (almacenamiento temporal)  
+
+- **Estable**: ✔️ (mantiene el orden relativo de elementos iguales).
+
+- **Ejemplo de uso**:  
+```python
+natural_merge_sort("input_filename", "output_filename")
