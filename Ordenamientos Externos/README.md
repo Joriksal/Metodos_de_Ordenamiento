@@ -74,5 +74,25 @@ Algoritmo de ordenamiento externo que aprovecha las secuencias ya ordenadas natu
   ```python
   polyphase_merge_sort("ruta/a/runs", "ruta/a/archivo_salida.txt")
 
+### 5. Distribution of Initial Runs  
+- **Descripción**:  
+  Técnica utilizada en ordenamientos externos para distribuir secuencias ordenadas (runs) iniciales entre múltiples archivos de trabajo antes de aplicar algoritmos como Balanced Merge o Polyphase.
+
+- **Cómo funciona**:  
+  1. **Lectura por bloques**: Se divide el archivo en fragmentos del mismo tamaño.  
+  2. **Ordenamiento**: Cada fragmento se ordena usando un algoritmo interno (como quicksort o mergesort).  
+  3. **Distribución**: Los runs resultantes se guardan en archivos separados, listos para ser utilizados en etapas de mezcla.
+
+- **Complejidad**:  
+  - ⏳ **Tiempo**: O(n log k), donde *k* es el tamaño del run.  
+  - 💾 **Espacio**: O(k) en memoria principal por run.
+
+- **Estable**: ✔️ (si el algoritmo interno lo es, como mergesort).
+
+- **Ejemplo de uso**:  
+  ```python
+  generate_runs("unsorted_data.txt", "runs", run_size=5)
+
+
 
 
