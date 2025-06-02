@@ -125,3 +125,24 @@
   ```python
   arr = [38, 27, 43, 3, 9, 82]
   merge_sort(arr)  # Salida: [3, 9, 27, 38, 43, 82]
+
+### 7. RadixSort 
+- **Descripción**:  
+  Algoritmo de ordenamiento no comparativo que procesa dígitos individuales desde el menos significativo (LSD) al más significativo (MSD).
+
+- **Cómo funciona**:  
+  1. **Identifica el máximo**: Determina el número con más dígitos.  
+  2. **Ordena por dígitos**: Desde la unidad (derecha) hacia la izquierda.  
+  3. **Usa Counting Sort**: Para ordenar los números según cada dígito.  
+
+- **Complejidad**:  
+  - ⏳ **Peor caso**: O(nk) donde k es el número de dígitos del máximo.  
+  - ✅ **Mejor caso**: O(nk)  
+  - 💾 **Espacio**: O(n + k)  
+
+- **Estable**: ✔️ (mantiene el orden relativo de elementos iguales).  
+
+- **Ejemplo**:  
+  ```python
+  arr = [170, 45, 75, 90, 802, 24, 2]
+  radix_sort(arr)  # Salida: [2, 24, 45, 75, 90, 170, 802]
