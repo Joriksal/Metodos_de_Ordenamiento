@@ -119,8 +119,8 @@ def straight_merge_sort(input_file, output_file, chunk_size=3):
 # Ejemplo de uso
 if __name__ == "__main__":
     # Configuración de rutas (¡personaliza estas rutas!)
-    input_file = "Ordenamientos Externos/Straight Merging/unsorted_data.txt"
-    output_file = "Ordenamientos Externos/Straight Merging/sorted_data.txt"
+    input_file = "Ordenamientos Externos/01_Straight_Merging/unsorted_data.txt"
+    output_file = "Ordenamientos Externos/01_Straight_Merging/sorted_data.txt"
     
     # Crear directorios si no existen
     os.makedirs(os.path.dirname(input_file), exist_ok=True)
