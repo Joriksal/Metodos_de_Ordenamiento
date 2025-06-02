@@ -104,3 +104,24 @@
   ```python
   arr = [10, 7, 8, 9, 1, 5]
   quick_sort(arr)  # Salida: [1, 5, 7, 8, 9, 10]
+
+### 6. MergeSort
+- **Descripción**:  
+  Algoritmo de divide y vencerás que divide la lista en mitades, las ordena recursivamente y luego las mezcla.
+
+- **Cómo funciona**:  
+  1. **Divide**: Divide la lista desordenada en dos sublistas de aproximadamente igual tamaño.  
+  2. **Conquista**: Ordena cada sublista recursivamente aplicando MergeSort.  
+  3. **Combina**: Mezcla las dos sublistas ordenadas para producir la solución.  
+
+- **Complejidad**:  
+  - ⏳ **Peor caso**: O(n log n)  
+  - ✅ **Mejor caso**: O(n log n)  
+  - 💾 **Espacio**: O(n) (necesita espacio adicional para mezclar)  
+
+- **Estable**: ✔️ (mantiene el orden relativo de elementos iguales).  
+
+- **Ejemplo**:  
+  ```python
+  arr = [38, 27, 43, 3, 9, 82]
+  merge_sort(arr)  # Salida: [3, 9, 27, 38, 43, 82]
