@@ -56,6 +56,23 @@ Algoritmo de ordenamiento externo que aprovecha las secuencias ya ordenadas natu
   ```python
   balanced_multiway_merge("carpeta_de_runs", "archivo_salida.txt")
 
+### 4. Polyphase Sort
+- **Descripción**:  
+  Algoritmo de ordenamiento externo que optimiza la mezcla de múltiples runs utilizando una distribución inicial basada en la secuencia de Fibonacci. Es especialmente eficiente cuando se dispone de un número limitado de archivos de trabajo.
+
+- **Cómo funciona**:  
+  1. **Generación de runs**: Se crean runs ordenados y se distribuyen entre los archivos de entrada siguiendo una secuencia específica (por ejemplo, Fibonacci) para optimizar las fases de mezcla.  
+  2. **Mezcla polifásica**: En cada fase, se seleccionan N-1 archivos como entrada y 1 como salida. Se realiza la mezcla de los runs, y los roles de los archivos se rotan en la siguiente fase. Este proceso continúa hasta que todos los runs se combinan en un único archivo ordenado.
+
+- **Complejidad**:  
+  - ⏳ **Tiempo**: O(n log n) en promedio.  
+  - 💾 **Espacio**: O(n) (requiere almacenamiento temporal para los runs y archivos de trabajo).
+
+- **Estable**: ❌ (no garantiza mantener el orden relativo de elementos iguales).
+
+- **Ejemplo de uso**:  
+  ```python
+  polyphase_merge_sort("ruta/a/runs", "ruta/a/archivo_salida.txt")
 
 
 
